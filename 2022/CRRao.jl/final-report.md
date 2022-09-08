@@ -1,7 +1,7 @@
 # GSoC 2022 Final Report: Making improvements in JuliaStats/CRRao.jl
 
-**Contributor:** Siddhant Chaudhary ([codetalker7](https://github.com/codetalker7))
-**Project URL**: https://github.com/xKDR/CRRao.jl
+**Contributor:** Siddhant Chaudhary ([codetalker7](https://github.com/codetalker7))  
+**Project URL**: https://github.com/xKDR/CRRao.jl  
 **GSoC Project Page:** https://summerofcode.withgoogle.com/programs/2022/projects/wbPGeN3c
 
 Overall, this project was about making improvements to the package in terms of the following.
