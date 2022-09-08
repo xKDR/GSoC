@@ -34,7 +34,7 @@ The files `random_number_generator.jl` and `general_stats.jl` contain code for i
 Finally, the bayesian models are in the `bayesian` directory, and the frequentist models are in the `frequentist` directory.
 
 Look at commits [1ecbe78ec9b69ecf093f3241050844e57c88c322](https://github.com/xKDR/CRRao.jl/commit/1ecbe78ec9b69ecf093f3241050844e57c88c322) through [1726c30d9b2b99bce9c7ed3a1bca5c5c7acea626](https://github.com/xKDR/CRRao.jl/commit/1726c30d9b2b99bce9c7ed3a1bca5c5c7acea626) for the major chunk of the reorganization of the code.
-i
+
 ## Relevant structures and functions
 
 The main work is done by the `fitmodel` function of the package, which uses multiple dispatch to delegate the work to different handlers; the idea is to somehow replicate the `zelig` function from the [Zelig Project](http://docs.zeligproject.org/articles/quickstart.html) in R.
@@ -52,12 +52,12 @@ Along with this, we have a few getter functions in `src/frequentist/getter.jl` a
 
 ## Writing documentation
 
-The package didn't have documentation; so we added a lot of it. Roughly it consists of a simple user guide to help a user get started with the package, and an API reference, which is supposed to be very detailed. The plan is to also include case studies in the documentation, and it is still decided how that will be done. Look at commits [87b815ee8f479218e96f9892015069553009c5b4](https://github.com/xKDR/CRRao.jl/commit/87b815ee8f479218e96f9892015069553009c5b4) through [003821104aee649b5d9a8547fc797be78ef9085f](https://github.com/xKDR/CRRao.jl/commit/003821104aee649b5d9a8547fc797be78ef9085f) for the documentation.
+The package didn't have documentation; so we added a lot of it. Roughly it consists of a simple user guide to help a user get started with the package, and an API reference, which is supposed to be very detailed. The plan is to also include case studies in the documentation, and it is still being decided how that will be done. Look at commits [87b815ee8f479218e96f9892015069553009c5b4](https://github.com/xKDR/CRRao.jl/commit/87b815ee8f479218e96f9892015069553009c5b4) through [003821104aee649b5d9a8547fc797be78ef9085f](https://github.com/xKDR/CRRao.jl/commit/003821104aee649b5d9a8547fc797be78ef9085f) for the documentation.
 
 ## Linting and refactoring the code
 
 The code has been refactored as much as possible to reduce repetitions and to ease the process of introducing changes. Currently the best linting package for Julia seems to be [JuliaFormatter.jl](https://domluna.github.io/JuliaFormatter.jl/dev/), which is well-maintained and seems to have a good user base. We have used this package to prettify the code; however it seems that there are certain issues with [JuliaFormatter.jl](https://domluna.github.io/JuliaFormatter.jl/dev/) which need to be fixed before the process can be fully automated (i.e be used with Git Hooks).
 
-i## Testing the code
+## Testing the code
 
 Testing the package is not as straightforward as it originally seemed. For all the models, the goal is to test against the [Zelig](http://docs.zeligproject.org/articles/quickstart.html) package in R. However, this is a bit hard to achieve; for instance, for bayesian models which use [Turing.jl](https://turing.ml/stable/), running MCMC chains on different machines can lead to very different results because of differences in numericals. Currently, we only have a few basic checks which make sure that the code is running without throwing errors. Testing against [Zelig](http://docs.zeligproject.org/articles/quickstart.html) will require more thought and experiments. 
