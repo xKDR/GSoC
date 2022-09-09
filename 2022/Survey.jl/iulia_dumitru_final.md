@@ -13,13 +13,13 @@ started the project, work on the package had already been started by the people 
 From the functionality I mentioned in my proposal, these functions and types were already
 implemented:
 
-— `svydesign` — type and constructor
+- `svydesign` — type and constructor
 
-— `svyby` — function
+- `svyby` — function
 
-— `svyglm` — type and constructor
+- `svyglm` — type and constructor
 
-— `svymean` — function
+- `svymean` — function
 
 
 But none of these were complete, except maybe for `svyby`. So, there was a lot of work to
@@ -43,19 +43,19 @@ where I became the second contributor of the package. To be fair, there are not 
 contributors at this point since it is a new package but still, I consider it a big deal.
 During this time, we implemented most of the functionality that is now in the package:
 
-— complete `svydesign`
+- complete `svydesign`
 
-— `svymean`, with standard errors
+- `svymean`, with standard errors
 
-— `svytotal`
+- `svytotal`
 
-— `dimnames`
+- `dimnames`
 
-— `svyplot`
+- `svyplot`
 
-— `svyhist`
+- `svyhist`
 
-— `svyboxplot`
+- `svyboxplot`
 
 Maybe it doesn't sound like much, but there were sweat and tears pouring out for these
 functions. Especially with `svymean` because we just couldn't get the standard error
