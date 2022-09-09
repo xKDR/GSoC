@@ -59,7 +59,7 @@ During this time, we implemented most of the functionality that is now in the pa
 
 Maybe it doesn't sound like much, but there were sweat and tears pouring out for these
 functions. Especially with `svymean` because we just couldn't get the standard error
-correct.
+right.
 
 Meanwhile, we were getting more attention from other contributors. Issues started appearing
 ([#4](https://github.com/xKDR/Survey.jl/issues/4), [#27](https://github.com/xKDR/Survey.jl/issues/27)),
@@ -67,7 +67,7 @@ mostly related to the style of the package. People were worried that going for a
 was not the best idea. So, we started discussing what to do next: should we keep
 working on the version we have now, or should we start from scratch with a new style?
 We decided to [ask for the community's opinion on Discourse](https://discourse.julialang.org/t/suggestions-for-the-design-of-survey-jl/86381)
-and we realised it was best to start from scratch.
+and we realised.. it was best to start from scratch.
 
 ## Falling into the Chasm of the Unknown
 At this point, I needed another break from coding to dive into research. I read even more
@@ -81,7 +81,7 @@ and I ended up procrastinating and ordering books like _Man's Search for Meaning
 _Meditations_. At some point, I started actually doing some work and I ended up with
 [this commit](https://github.com/xKDR/Survey.jl/commit/ce96f42bae02353d99116c23dacb0dc4f9844e35).
 This was the beginning of the new design, started on the branch `design_update`. For now,
-this branch still exists, and all of our work following this commit was done on this branch.
+this branch still exists and all of our work following this commit was done on this branch.
 Hopefully, it will get merged into `main` soon.
 
 ## What actually happened in the `design_update` branch?
@@ -90,7 +90,7 @@ working on this cool new design, I was naive enough to think that it will as eas
 changing all the code we have so far to accommodate for the new version. But _no_. With
 new design comes new responsibility. Now we had to think about how to write elegant and
 efficient code while still getting correct results with our package. Of course "elegant"
-and "efficient" code writing comes with time and experience. Although getting correct results
+and "efficient" code writing comes with time and experience. But getting correct results
 is something that could be done right away. Unfortunately, we just weren't able to get
 them right. And we are still [working on that](https://github.com/xKDR/Survey.jl/pull/51).
 We did manage to change all our code and make it work for the new design. We just need
@@ -104,7 +104,7 @@ rather short on time. But I did my best, I did my research, I went through the d
 and through the source code of the documentation side by side and I came up with
 [something](https://github.com/xKDR/Survey.jl/pull/54). Most functionality was already
 documented. I just had to do some rephrasing here and there and restructure the final
-document. Although it is starting to take a nice shape, I think.
+document. But it is starting to take a nice shape, I think.
 
 ## Testing
 This is probably the weakest point of the package so far. Our code coverage is only 57%.
@@ -117,7 +117,7 @@ will explicitly say this anyway: it was great! Everything, every setback, every 
 comment, every documentation page has taught me a lot. I learned about survey statistics,
 statistics software and people's expectations about statistics software (which are not
 great - people expect it to be slow or expensive), about working with a very cool team
-(thank you xKDR, and special thank you, Ayush!) and tons about Julia and starting a
+(thank you xKDR, and special thank you Ayush!) and tons about Julia and starting a
 package in Julia. For example, I found out there's a way to create
 [package templates](https://invenia.github.io/PkgTemplates.jl/stable/). There is also a
 very useful [formatting package](https://domluna.github.io/JuliaFormatter.jl/dev/), or
