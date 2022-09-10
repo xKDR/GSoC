@@ -17,7 +17,7 @@ We will now describe the specific changes that were made keeping in mind the abo
 
 ## Code organization and utilities
 
-The code is roughly organized as follows: the main types and other structures are defined in `src/CRRao.jl`. Two important types, viz. `FrequentistRegression` and `BayesianRegression` are defined in the file `src/fitmodel.jl`; the idea behind these types is two collect all frequentist regression models and all bayesian regression models under the same umbrella. The `FrequentistRegression` type is a wrapper around the following data:
+The code is roughly organized as follows: the main types and other structures are defined in `src/CRRao.jl`. Two important types, viz. `FrequentistRegression` and `BayesianRegression` are defined in the file `src/fitmodel.jl`; the idea behind these types is two collect all frequentist regression models and all Bayesian regression models under the same umbrella. The `FrequentistRegression` type is a wrapper around the following data:
 
 1. `model`: a model returned by the [GLM.jl](https://github.com/JuliaStats/GLM.jl) package.
 2. `formula`: a `FormulaTerm`, which is used while making predictions from the model.
@@ -31,7 +31,7 @@ A few printing functions have been written in the file `print.jl`; again, the id
 
 The files `random_number_generator.jl` and `general_stats.jl` contain code for implementing a common RNG and some simple functions which are used in the code for the models.
 
-Finally, the bayesian models are in the `bayesian` directory, and the frequentist models are in the `frequentist` directory.
+Finally, the Bayesian models are in the `bayesian` directory, and the frequentist models are in the `frequentist` directory.
 
 Look at commits [1ecbe78ec9b69ecf093f3241050844e57c88c322](https://github.com/xKDR/CRRao.jl/commit/1ecbe78ec9b69ecf093f3241050844e57c88c322) through [1726c30d9b2b99bce9c7ed3a1bca5c5c7acea626](https://github.com/xKDR/CRRao.jl/commit/1726c30d9b2b99bce9c7ed3a1bca5c5c7acea626) for the major chunk of the reorganization of the code.
 
