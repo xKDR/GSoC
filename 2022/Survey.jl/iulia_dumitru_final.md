@@ -14,11 +14,8 @@ From the functionality I mentioned in my proposal, these functions and types wer
 implemented:
 
 - `svydesign` — type and constructor
-
 - `svyby` — function
-
 - `svyglm` — type and constructor
-
 - `svymean` — function
 
 
@@ -44,17 +41,11 @@ contributors at this point since it is a new package but still, I consider it a 
 During this time, we implemented most of the functionality that is now in the package:
 
 - complete `svydesign`
-
 - `svymean`, with standard errors
-
 - `svytotal`
-
 - `dimnames`
-
 - `svyplot`
-
 - `svyhist`
-
 - `svyboxplot`
 
 Maybe it doesn't sound like much, but there were sweat and tears pouring out for these
