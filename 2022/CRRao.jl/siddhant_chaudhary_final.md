@@ -25,7 +25,7 @@ The code is roughly organized as follows: the main types and other structures ar
 
 `BayesianRegression` has a similar structure; instead of a model we have a `chain` object returned by the [Turing.jl](https://turing.ml/stable/) package.
 
-This is the key idea behind our package: to introduce relevant structures so as to utilize different packages under the same API.
+This is the key idea behind our package: to introduce relevant structures to utilize different packages under the same API.
 
 A few printing functions have been written in the file `print.jl`; again, the idea is to have a common format printed out, irrespective of what kind of statistical inference is done. A lot of improvements can be made to these printing functions.
 
@@ -56,7 +56,7 @@ The package didn't have documentation; so we added a lot of it. Roughly it consi
 
 ## Linting and refactoring the code
 
-The code has been refactored as much as possible to reduce repetitions and to ease the process of introducing changes. Currently the best linting package for Julia seems to be [JuliaFormatter.jl](https://domluna.github.io/JuliaFormatter.jl/dev/), which is well-maintained and seems to have a good user base. We have used this package to prettify the code; however it seems that there are certain issues with [JuliaFormatter.jl](https://domluna.github.io/JuliaFormatter.jl/dev/) which need to be fixed before the process can be fully automated (i.e be used with Git Hooks).
+The code has been refactored as much as possible to reduce repetitions and to ease the process of introducing changes. Currently, the best linting package for Julia seems to be [JuliaFormatter.jl](https://domluna.github.io/JuliaFormatter.jl/dev/), which is well-maintained and seems to have a good user base. We have used this package to prettify the code; however it seems that there are certain issues with [JuliaFormatter.jl](https://domluna.github.io/JuliaFormatter.jl/dev/) which need to be fixed before the process can be fully automated (i.e. be used with Git Hooks).
 
 ## Testing the code
 
