@@ -17,7 +17,7 @@ We will now describe the specific changes that were made keeping in mind the abo
 
 ## Code organization and utilities
 
-The code is roughly organized as follows: the main types and other structures are defined in `src/CRRao.jl`. Two important types, viz. `FrequentistRegression` and `BayesianRegression` are defined in the file `src/fitmodel.jl`; the idea behind these types is two collect all frequentist regression models and all bayesian regression models under the same umbrella. The `FrequentistRegression` type is a wrapper around the following data:
+The code is roughly organized as follows: the main types and other structures are defined in `src/CRRao.jl`. Two important types, viz. `FrequentistRegression` and `BayesianRegression` are defined in the file `src/fitmodel.jl`; the idea behind these types is two collect all frequentist regression models and all Bayesian regression models under the same umbrella. The `FrequentistRegression` type is a wrapper around the following data:
 
 1. `model`: a model returned by the [GLM.jl](https://github.com/JuliaStats/GLM.jl) package.
 2. `formula`: a `FormulaTerm`, which is used while making predictions from the model.
@@ -25,13 +25,13 @@ The code is roughly organized as follows: the main types and other structures ar
 
 `BayesianRegression` has a similar structure; instead of a model we have a `chain` object returned by the [Turing.jl](https://turing.ml/stable/) package.
 
-This is the key idea behind our package: to introduce relevant structures so as to utilize different packages under the same API.
+This is the key idea behind our package: to introduce relevant structures to utilize different packages under the same API.
 
 A few printing functions have been written in the file `print.jl`; again, the idea is to have a common format printed out, irrespective of what kind of statistical inference is done. A lot of improvements can be made to these printing functions.
 
 The files `random_number_generator.jl` and `general_stats.jl` contain code for implementing a common RNG and some simple functions which are used in the code for the models.
 
-Finally, the bayesian models are in the `bayesian` directory, and the frequentist models are in the `frequentist` directory.
+Finally, the Bayesian models are in the `bayesian` directory, and the frequentist models are in the `frequentist` directory.
 
 Look at commits [1ecbe78ec9b69ecf093f3241050844e57c88c322](https://github.com/xKDR/CRRao.jl/commit/1ecbe78ec9b69ecf093f3241050844e57c88c322) through [1726c30d9b2b99bce9c7ed3a1bca5c5c7acea626](https://github.com/xKDR/CRRao.jl/commit/1726c30d9b2b99bce9c7ed3a1bca5c5c7acea626) for the major chunk of the reorganization of the code.
 
@@ -56,7 +56,7 @@ The package didn't have documentation; so we added a lot of it. Roughly it consi
 
 ## Linting and refactoring the code
 
-The code has been refactored as much as possible to reduce repetitions and to ease the process of introducing changes. Currently the best linting package for Julia seems to be [JuliaFormatter.jl](https://domluna.github.io/JuliaFormatter.jl/dev/), which is well-maintained and seems to have a good user base. We have used this package to prettify the code; however it seems that there are certain issues with [JuliaFormatter.jl](https://domluna.github.io/JuliaFormatter.jl/dev/) which need to be fixed before the process can be fully automated (i.e be used with Git Hooks).
+The code has been refactored as much as possible to reduce repetitions and to ease the process of introducing changes. Currently, the best linting package for Julia seems to be [JuliaFormatter.jl](https://domluna.github.io/JuliaFormatter.jl/dev/), which is well-maintained and seems to have a good user base. We have used this package to prettify the code; however it seems that there are certain issues with [JuliaFormatter.jl](https://domluna.github.io/JuliaFormatter.jl/dev/) which need to be fixed before the process can be fully automated (i.e. be used with Git Hooks).
 
 ## Testing the code
 
